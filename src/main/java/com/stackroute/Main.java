@@ -11,11 +11,9 @@ public class Main
     public static void main( String[] args )
     {
 
-        /* create object (bean) using ApplicationContext*/
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
-        Movie movie = (Movie) applicationContext.getBean("movie1");
+        Movie movie = applicationContext.getBean(Movie.class);
         System.out.println(movie);
-        Movie movie1 = (Movie) applicationContext.getBean("movie2");
-        System.out.println(movie1);
+        System.out.println(applicationContext.getBean(Movie.class)==applicationContext.getBean(Movie.class));
     }
 }
