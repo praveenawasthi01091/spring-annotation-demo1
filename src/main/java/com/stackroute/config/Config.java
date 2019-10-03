@@ -1,6 +1,6 @@
 package com.stackroute.config;
 
-//import com.stackroute.demo.BeanLifeCycleDemo;
+import com.stackroute.demo.BeanPostProcessorDemo;
 import com.stackroute.domain.Actor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,10 +21,10 @@ public class Config {
         return new Actor("Salman","Male",50);
     }
 
-  /*  @Bean
-    public BeanLifeCycleDemo beanLifeCycleDemo()
+   @Bean
+    public BeanPostProcessorDemo beanPostProcessor()
     {
-        return new BeanLifeCycleDemo();
-    }*/
+        return new BeanPostProcessorDemo();
+    };
 
 }
